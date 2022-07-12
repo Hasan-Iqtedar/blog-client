@@ -1,0 +1,15 @@
+.card {
+    width: 300px;
+    height: 200px;
+    box-shadow: 1px 1px 5px rgb(201, 199, 199);
+}
+
+.card:hover {
+    background-color: whitesmoke;
+}
+
+@media (min-width: 500px) {
+    .card {
+        width: 450px;
+    }
+}
