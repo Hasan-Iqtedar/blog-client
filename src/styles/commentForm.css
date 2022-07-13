@@ -1,0 +1,40 @@
+.comment-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-form input, .comment-form textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.comment-form input {
+    height: 12%;
+}
+
+.comment-form textarea {
+    height: 50%;
+}
+
+.comment-form input:focus, .comment-form textarea:focus {
+    outline: 1px solid gray;
+}
+
+.comment-form button {
+    width: 10%;
+    min-width: 50px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: medium;
+    align-self: flex-end;
+    color: white;
+    background-color: rgb(194, 194, 194);
+}
+
+.comment-form button:hover {
+    background-color: rgb(182, 179, 179);
+}
