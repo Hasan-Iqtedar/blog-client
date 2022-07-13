@@ -10,6 +10,11 @@
     align-items: center;
 }
 
+.home .content:hover {
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
 .home .content h2 {
     margin-top: 5px;
     margin-bottom: 15px;
