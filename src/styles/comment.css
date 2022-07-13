@@ -1,0 +1,22 @@
+.comment {
+    display: flex;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.comment h4 {
+    padding-bottom: 5px;
+    font-weight: 400;
+    border-bottom: 1px solid lightgray;
+}
+
+.comment h4, .comment p {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
+.comment p {
+    height: 60%;
+    overflow: scroll;
+}
