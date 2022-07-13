@@ -18,10 +18,19 @@
 .home .content h2 {
     margin-top: 5px;
     margin-bottom: 15px;
+    overflow: scroll;
 }
 
 .home .date-container {
     width: 80%;
     margin-top: auto;
     border-top: 1px solid lightgray;
+}
+
+@media (min-width:850px) {
+    .home {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 }

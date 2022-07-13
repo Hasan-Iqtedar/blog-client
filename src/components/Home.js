@@ -26,7 +26,10 @@ const Home = (props) => {
 };
 
 const style = {
+  width: "340px",
   marginBottom: "30px",
+  marginLeft: "30px",
+  marginRight: "30px",
   padding: "5px",
   textAlign: "center",
 };
