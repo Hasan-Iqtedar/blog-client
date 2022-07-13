@@ -1,0 +1,17 @@
+.post-detail {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.post-detail .content {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.comments-container {
+    border: 1px solid red;
+}
