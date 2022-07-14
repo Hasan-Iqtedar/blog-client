@@ -9,6 +9,7 @@ import { URL } from "./constants/utils";
 
 function App() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(URL + "/posts/published", {
@@ -17,14 +18,17 @@ function App() {
     })
       .then((res) => res.json())
       .then((resData) => {
-        // console.log(resData);
+        console.log(resData);
         updatePosts(resData);
+        updateLoading(false);
       });
   }, []);
 
   const updatePosts = (posts) => {
     setPosts(posts);
   };
+
+  const updateLoading = (loading) => setLoading(loading);
 
   return (
     <div className="app">
@@ -33,7 +37,7 @@ function App() {
       </Header>
 
       <Routes>
-        <Route path="/" element={<Home posts={posts} />} />
+        <Route path="/" element={<Home posts={posts} isLoading={loading} />} />
         <Route path="/post/:postId" element={<PostDetail />} />
       </Routes>
     </div>

@@ -9,20 +9,24 @@ const Home = (props) => {
     navigate(`/post/${post._id}`, { state: { post: post } });
   };
 
-  return (
-    <div className="home">
-      {props.posts.map((post) => (
-        <Card key={post._id} style={style}>
-          <div className="content" onClick={viewPostDetail.bind(this, post)}>
-            <h2>{post.title}</h2>
-            <div className="date-container">
-              <p>{new Date(post.publish_date).toDateString()}</p>
+  if (!props.isLoading) {
+    return (
+      <div className="home">
+        {props.posts.map((post) => (
+          <Card key={post._id} style={style}>
+            <div className="content" onClick={viewPostDetail.bind(this, post)}>
+              <h2>{post.title}</h2>
+              <div className="date-container">
+                <p>{new Date(post.publish_date).toDateString()}</p>
+              </div>
             </div>
-          </div>
-        </Card>
-      ))}
-    </div>
-  );
+          </Card>
+        ))}
+      </div>
+    );
+  } else {
+    return <div>Loading...</div>;
+  }
 };
 
 const style = {
