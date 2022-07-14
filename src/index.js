@@ -6,7 +6,7 @@ import "./styles/index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="/blog-client" >
+  <BrowserRouter basename="/blog-client">
     <App />
   </BrowserRouter>
 );
