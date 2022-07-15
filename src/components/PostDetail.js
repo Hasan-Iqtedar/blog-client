@@ -23,7 +23,6 @@ const PostDetail = (props) => {
       headers: { "Content-Type": "Application/json" },
     }).then((res) =>
       res.json().then((resData) => {
-        console.log(resData);
         updateComments(resData);
       })
     );
